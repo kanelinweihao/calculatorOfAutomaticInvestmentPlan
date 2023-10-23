@@ -1,0 +1,6 @@
+### git忽略目录
+#
+.idea/
+./config/env/
+#
+*.exe

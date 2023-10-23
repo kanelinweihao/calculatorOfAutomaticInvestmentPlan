@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>定投计算器</title>
+</head>
+<body>
+    {{/*参数显示*/}}
+    <div>
+        项目名称Title : {{.ModTitle}}
+    </div>
+    <div>
+        项目版本Version : {{.Version}}
+    </div>
+    {{/*提交表单*/}}
+    <form>
+        <div>
+            总期数SumTimes
+            <input type="text" name="SumTimes" value={{.SumTimes}} onkeyup="value=value.replace(/[^\d]/g,'')">
+        </div>
+        <div>
+            起始金额AmountBegin
+            <input type="text" name="AmountBegin" value={{.AmountBegin}}>
+        </div>
+        <div>
+            每期定投金额AmountAdd
+            <input type="text" name="AmountAdd" value={{.AmountAdd}}>
+        </div>
+        <div>
+            每期实际收益率RateReal
+            <input type="text" name="RateReal" value={{.RateReal}}>
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+    {{/*结果显示*/}}
+    <div>
+        <b>{{.MsgOut}}</b>
+    </div>
+</body>
+</html>
